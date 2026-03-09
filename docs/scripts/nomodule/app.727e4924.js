@@ -52178,7 +52178,7 @@
         Name: 'University of Washington',
         Longitude: '-122.3419756',
         Latitude: '47.6236533',
-        status: 'Did not answer the survey',
+        status: 'Yes, they offer care',
       },
       {
         Name: 'UW Medicine Harborview Medical Center Post-COVID-19 Rehabilitation and Recovery Clinic',
@@ -52672,4 +52672,4 @@
     });
   }
 })();
-//# sourceMappingURL=app.11d9e391.js.map
+//# sourceMappingURL=app.727e4924.js.map

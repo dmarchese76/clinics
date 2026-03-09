@@ -51405,7 +51405,7 @@ var Li = Mi(Di.exports),
       Name: 'University of Washington',
       Longitude: '-122.3419756',
       Latitude: '47.6236533',
-      status: 'Did not answer the survey',
+      status: 'Yes, they offer care',
     },
     {
       Name: 'UW Medicine Harborview Medical Center Post-COVID-19 Rehabilitation and Recovery Clinic',
@@ -51884,4 +51884,4 @@ function qi(t) {
     return !1;
   });
 }
-//# sourceMappingURL=app.242d52ca.js.map
+//# sourceMappingURL=app.0ef4d179.js.map
