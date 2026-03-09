@@ -49842,14 +49842,14 @@
       },
       {
         Name: 'MedHelp Highway 280',
-        Longitude: '',
-        Latitude: '',
+        Longitude: null,
+        Latitude: null,
         status: 'Did not answer the survey',
       },
       {
-        Name: '',
-        Longitude: '',
-        Latitude: '',
+        Name: null,
+        Longitude: null,
+        Latitude: null,
         status: 'Did not answer the survey',
       },
       {
@@ -49890,8 +49890,8 @@
       },
       {
         Name: 'Neuroversion',
-        Longitude: '',
-        Latitude: '',
+        Longitude: null,
+        Latitude: null,
         status: 'Did not answer the survey',
       },
       {
@@ -50129,9 +50129,9 @@
         status: 'Did not answer the survey',
       },
       {
-        Name: '',
-        Longitude: '',
-        Latitude: '',
+        Name: null,
+        Longitude: null,
+        Latitude: null,
         status: 'Did not answer the survey',
       },
       {
@@ -50249,9 +50249,9 @@
         status: 'Did not answer the survey',
       },
       {
-        Name: '',
-        Longitude: '',
-        Latitude: '',
+        Name: null,
+        Longitude: null,
+        Latitude: null,
         status: 'Did not answer the survey',
       },
       {
@@ -51228,8 +51228,8 @@
       },
       {
         Name: 'Mount Sinai Cohen Center for Recovery from Complex Chronic Illnesses (CoRE)',
-        Longitude: '',
-        Latitude: '',
+        Longitude: null,
+        Latitude: null,
         status: 'Yes, they offer care',
       },
       {
@@ -51698,7 +51698,7 @@
         Name: 'University of Pittsburgh Medical Center Post-COVID Recovery Clinic',
         Longitude: '-79.9593255',
         Latitude: '40.4415314',
-        status: 'Did not answer the survey',
+        status: 'Yes, they offer care',
       },
       {
         Name: 'WellSpan COVID Care',
@@ -52672,4 +52672,4 @@
     });
   }
 })();
-//# sourceMappingURL=app.23de5c26.js.map
+//# sourceMappingURL=app.11d9e391.js.map

@@ -49069,14 +49069,14 @@ var Li = Mi(Di.exports),
     },
     {
       Name: 'MedHelp Highway 280',
-      Longitude: '',
-      Latitude: '',
+      Longitude: null,
+      Latitude: null,
       status: 'Did not answer the survey',
     },
     {
-      Name: '',
-      Longitude: '',
-      Latitude: '',
+      Name: null,
+      Longitude: null,
+      Latitude: null,
       status: 'Did not answer the survey',
     },
     {
@@ -49117,8 +49117,8 @@ var Li = Mi(Di.exports),
     },
     {
       Name: 'Neuroversion',
-      Longitude: '',
-      Latitude: '',
+      Longitude: null,
+      Latitude: null,
       status: 'Did not answer the survey',
     },
     {
@@ -49356,9 +49356,9 @@ var Li = Mi(Di.exports),
       status: 'Did not answer the survey',
     },
     {
-      Name: '',
-      Longitude: '',
-      Latitude: '',
+      Name: null,
+      Longitude: null,
+      Latitude: null,
       status: 'Did not answer the survey',
     },
     {
@@ -49476,9 +49476,9 @@ var Li = Mi(Di.exports),
       status: 'Did not answer the survey',
     },
     {
-      Name: '',
-      Longitude: '',
-      Latitude: '',
+      Name: null,
+      Longitude: null,
+      Latitude: null,
       status: 'Did not answer the survey',
     },
     {
@@ -50455,8 +50455,8 @@ var Li = Mi(Di.exports),
     },
     {
       Name: 'Mount Sinai Cohen Center for Recovery from Complex Chronic Illnesses (CoRE)',
-      Longitude: '',
-      Latitude: '',
+      Longitude: null,
+      Latitude: null,
       status: 'Yes, they offer care',
     },
     {
@@ -50925,7 +50925,7 @@ var Li = Mi(Di.exports),
       Name: 'University of Pittsburgh Medical Center Post-COVID Recovery Clinic',
       Longitude: '-79.9593255',
       Latitude: '40.4415314',
-      status: 'Did not answer the survey',
+      status: 'Yes, they offer care',
     },
     {
       Name: 'WellSpan COVID Care',
@@ -51884,4 +51884,4 @@ function qi(t) {
     return !1;
   });
 }
-//# sourceMappingURL=app.69bb204c.js.map
+//# sourceMappingURL=app.242d52ca.js.map
