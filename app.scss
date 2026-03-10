@@ -1,0 +1,486 @@
+// RESET
+// Smooths out the rough edges across browsers
+@use './tools/normalize';
+
+// VARIABLES
+// Reusable settings
+@use './variables/colors';
+@use './variables/fonts';
+// Define breakpoint variables
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+// Masthead navigation
+.masthead {
+  background-color: #5f50ad;
+  padding: 1rem 0;
+  // position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .masthead-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .masthead-image {
+    height: 100px; /* Adjust as needed */
+    width: auto;
+  }
+
+  .logo {
+    color: white;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .masthead {
+    .logo {
+      font-size: 1.25rem;
+    }
+  }
+}
+.container {
+  max-width: 630px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+// Story header styles
+.story-header {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+
+  .headline {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.02em;
+  }
+
+  .dek {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #444;
+    font-weight: 400;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .byline {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 0 2rem 0;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+
+    .author {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .date {
+      color: #888;
+    }
+  }
+}
+.intro-text {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #333;
+
+  p {
+    margin: 0 0 1.2rem 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .story-header {
+    padding: 1.5rem 1rem 2rem;
+
+    .headline {
+      font-size: 2rem;
+    }
+
+    .dek {
+      font-size: 1.125rem;
+    }
+
+    .intro-text {
+      font-size: 1rem;
+    }
+  }
+}
+
+// YOUR CODE
+// Starting writing your stuff below here
+#scroll {
+  position: relative;
+  background-color: #f3f3f3;
+  padding: 0;
+}
+
+.scroll__graphic {
+  position: sticky;
+  left: 0;
+  width: 100%;
+  //height: 100vh;
+  top: 0;
+  margin: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  // background-color: #737272;
+  z-index: 0;
+}
+
+.scroll__graphic .chart {
+  text-align: center;
+  //padding: 1rem;
+  position: relative;
+  //   height: 100vh;
+  width: 100%;
+  // -moz-transform: translate(-50%, -50%);
+  // -webkit-transform: translate(-50%, -50%);
+  // transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.scroll__text {
+  position: relative;
+  padding: 0;
+  max-width: 20rem;
+  margin: auto;
+  z-index: 100;
+  padding-bottom: 50vh;
+}
+
+.step {
+  margin: 110%;
+  color: #1a1a1a;
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  box-sizing: border-box;
+  border-left: 3px solid #5f50ad;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.step p {
+  // Vertically too
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: block;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  padding: 1.5rem;
+  font-size: 1.125rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+.step.is-active {
+  background-color: rgba(255, 255, 255, 0.98);
+  color: #1a1a1a;
+  border-left: 4px solid #5f50ad;
+}
+
+#map {
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  position: fixed; /* Fix the map to the viewport */
+  top: 0;
+  left: 0;
+  z-index: 0; /* Ensure it is behind other elements */
+}
+
+#image-popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden; // Add this
+  transition: opacity 0.5s ease, visibility 0.5s ease; // Add visibility transition
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+
+  &.active {
+    opacity: 1;
+    visibility: visible; // Add this
+    pointer-events: auto;
+  }
+}
+
+.popup-image {
+  position: absolute; // Changed from relative to absolute for random positioning
+  max-width: 600px; // Fixed max width instead of percentage
+  max-height: 500px; // Fixed max height instead of percentage
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: popIn 0.6s ease forwards;
+}
+
+#image-popup-container-2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden; // Add this
+  transition: opacity 0.3s ease, visibility 0.3s ease; // Add visibility transition
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+
+  &.active {
+    opacity: 1;
+    visibility: visible; // Add this
+  }
+}
+.popup-image2 {
+  max-width: 30%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: popIn 0.6s ease forwards;
+}
+
+// write a media query for popup-image2 below 768px
+@media (max-width: $breakpoint-lg) {
+  #image-popup-container-2 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .popup-image2 {
+    max-width: 60%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(0, 0, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 255, 0);
+  }
+}
+
+@keyframes popIn {
+  to {
+    opacity: 1;
+  }
+}
+
+// @keyframes popIn {
+//   to {
+//     opacity: 1;
+//     transform: scale(1) rotate(0deg);
+//   }
+// }
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+// Responsive adjustments
+@media (max-width: $breakpoint-lg) {
+  #image-popup-container {
+    .popup-image {
+      max-width: 90%;
+      max-height: 40%;
+    }
+  }
+}
+.marker-with-pulse::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 255, 0.8);
+  margin-top: 0;
+  margin-left: 0;
+  animation: ringPulse 2s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes ringPulse {
+  0% {
+    width: 12px;
+    height: 12px;
+    margin-top: -6px;
+    margin-left: -6px;
+    opacity: 1;
+  }
+  100% {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+    opacity: 0;
+  }
+}
+@media (max-width: $breakpoint-lg) {
+  #map {
+    height: 110vh;
+    height: 100dvh;
+  }
+  .scroll__text {
+    max-width: 80%; // Make it wider on mobile
+    margin: 0 auto; // Center it
+  }
+
+  .step {
+    margin: 100% auto; // Center the steps
+  }
+}
+
+// Footer styles - matched to reference site
+.site-footer {
+  background-color: #f8f8f8; // Exact light gray from reference
+  margin-top: 2.5em;
+  padding-top: 2.5em;
+  font-size: 0.875rem; // tiny font size to match reference
+  color: #333;
+  line-height: 1.5;
+  p {
+    margin: 0;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    a {
+      color: #5f50ad;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      font-size: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 0.5rem;
+      gap: 1rem;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      padding: 0 0.5rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      padding-bottom: var(--wp--preset--spacing--40, 1.5rem);
+
+      li {
+        margin-bottom: 5px;
+        font-size: 0.875rem; // small font size
+      }
+    }
+  }
+
+  .footer-copyright {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 11px;
+    color: #666;
+    text-transform: uppercase;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .site-footer {
+    .footer-content {
+      flex-direction: column;
+    }
+
+    .footer-column {
+      margin-bottom: 0.5rem;
+      padding: 0;
+    }
+  }
+
+  // Make masthead logo smaller on mobile
+  .masthead .masthead-image {
+    height: 70px;
+  }
+
+  // Make H1 header larger on mobile
+  .story-header {
+    .headline {
+      font-size: 2.4rem;
+    }
+  }
+}
