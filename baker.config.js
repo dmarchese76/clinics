@@ -5,8 +5,8 @@ const entrypoints = [
 
 export default {
   output: 'docs',
-  domain: 'https://dmarchese76.github.io',
-  pathPrefix: '/clinics/',
+  domain: 'https://clinics.thesicktimes.org',
+  pathPrefix: '/',
   entrypoints: `scripts/${
     entrypoints.length > 1 ? `{${entrypoints.join(',')}}` : entrypoints[0]
   }.js`,
